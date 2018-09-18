@@ -19,6 +19,10 @@ public class Main {
         int iii = 3;
         int yyy = iii + 1;
         System.out.println(yyy);
+
+        int[][] map = new int[2][2];
+        map [0][1] = 6;
+
     }
 
 

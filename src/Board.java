@@ -5,6 +5,7 @@ public class Board {
 
     private Set<Position> positions = new HashSet<>();
 
+
     public Board () {
 
     }
@@ -22,5 +23,19 @@ public class Board {
             }
         }
     }
+
+
+    public String toString(int [][] values) {
+        String result = "\n";
+        for (int y = 0; y < 7; y++) {
+
+            for (int x = 0; x < 8; x++) {
+                result = "  " + result + values[y][x] +  "  ";
+            }
+            result = result + "\n";
+        }
+        return result;
+    }
+
 }
 

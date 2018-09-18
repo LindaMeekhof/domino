@@ -14,10 +14,12 @@ public class Bones {
     }
 
     public void createBones () {
+        int value = 1;
         for (int x = 0; x < 7; x++) {
             for (int y = 0; y < 7; y++) {
                 if (x <= y) {
-                    bones.add (new Bone (x, y));
+                    bones.add (new Bone (x, y, value));
+                    value++;
                 }
             }
         }
