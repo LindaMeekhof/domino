@@ -1,5 +1,8 @@
+package puzzle;
+
 import java.util.HashSet;
 import java.util.Set;
+
 
 public class Board {
 
@@ -19,7 +22,7 @@ public class Board {
             for (int x = 0; x < 8; x++) {
                 Position newPosition = new Position(x, y, values[y][x]);
                 positions.add (newPosition);
-                System.out.println(newPosition);
+                //System.out.println(newPosition);
             }
         }
     }

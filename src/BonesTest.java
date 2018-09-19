@@ -1,4 +1,4 @@
-import static org.junit.Assert.*;
+import puzzle.Bones;
 
 public class BonesTest {
 

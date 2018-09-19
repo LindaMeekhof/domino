@@ -1,15 +1,18 @@
-import java.util.HashSet;
-import java.util.Set;
+package puzzle;
+
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Bones {
 
-    private Set<Bone> bones = new HashSet<>();
+    private List<Bone> bones = new ArrayList<>();
 
-    public Set<Bone> getBones() {
+    public List<Bone> getBones() {
         return bones;
     }
 
-    public void setBones(Set<Bone> bones) {
+    public void setBones(List<Bone> bones) {
         this.bones = bones;
     }
 

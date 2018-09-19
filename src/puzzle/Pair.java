@@ -1,3 +1,7 @@
+package puzzle;
+
+import puzzle.Position;
+
 public class Pair {
 
     private Position position1;

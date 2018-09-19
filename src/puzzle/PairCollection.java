@@ -1,19 +1,24 @@
-import java.util.HashSet;
-import java.util.Set;
+package puzzle;
+
+import puzzle.Pair;
+import puzzle.Position;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PairCollection {
 
-    private Set<Pair> pairCollection = new HashSet<>();
+    private List<Pair> pairCollection = new ArrayList<>();
 
     public PairCollection(){
 
     }
 
-    public Set<Pair> getPairCollection() {
+    public List<Pair> getPairCollection() {
         return pairCollection;
     }
 
-    public void setPairCollection(Set<Pair> pairCollection) {
+    public void setPairCollection(List<Pair> pairCollection) {
         this.pairCollection = pairCollection;
     }
 
@@ -27,7 +32,7 @@ public class PairCollection {
                     Position position2 = new Position(x + 1, y, values [y][right]);
                     Pair pair = new Pair(position1, position2);
                     pairCollection.add(pair);
-                    System.out.println(pair);
+                   // System.out.println(pair);
                 }
 
                 if (y < 6) {
@@ -35,7 +40,7 @@ public class PairCollection {
                     Position position2 = new Position(x, y + 1, values [y + 1][x]);
                     Pair pair = new Pair(position1, position2);
                     pairCollection.add(pair);
-                    System.out.println(pair);
+                  //  System.out.println(pair);
                 }
             }
         }

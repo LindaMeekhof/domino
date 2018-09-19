@@ -1,8 +1,11 @@
+package puzzle;
+
 public class Bone {
 
     private int pip1;
     private int pip2;
     private int value;
+
 
     public Bone(int pip1, int pip2) {
         this.pip1 = pip1;

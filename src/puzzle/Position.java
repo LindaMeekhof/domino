@@ -1,3 +1,5 @@
+package puzzle;
+
 public class Position {
 
     private int xCo;
