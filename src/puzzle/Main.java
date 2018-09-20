@@ -1,5 +1,8 @@
 package puzzle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -25,6 +28,23 @@ public class Main {
         int[][] map = new int[2][2];
         map [0][1] = 6;
 
+
+        List<String> list = new ArrayList<>();
+        list.add("test");
+        list.add("test2");
+        list.add("test3");
+        System.out.println(list);
+
+      //  list.clear();
+        System.out.println("clear" + list);
+
+        List<String> nList = new ArrayList();
+        nList.addAll(list);
+        System.out.println("new list" + nList);
+
+
+        int[][] n = new int[2][3];
+        System.out.println("value" + n[1][1]);
     }
 
 

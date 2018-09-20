@@ -1,5 +1,6 @@
 package puzzle;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,7 +11,7 @@ public class Puzzle {
     private Board board;
     private PairCollection pairs;
     private List<Combi> combies = new ArrayList<>();
-    private List<MapResults> resultMaps;
+    private List<BoardResult> resultMaps;
 
     public Puzzle(){
 
@@ -48,11 +49,11 @@ public class Puzzle {
         this.combies = combies;
     }
 
-    public List<MapResults> getResultMaps() {
+    public List<BoardResult> getResultMaps() {
         return resultMaps;
     }
 
-    public void setResultMaps(List<MapResults> resultMaps) {
+    public void setResultMaps(List<BoardResult> resultMaps) {
         this.resultMaps = resultMaps;
     }
 
@@ -61,7 +62,7 @@ public class Puzzle {
         board = new Board();
         pairs = new PairCollection();
         resultMaps = new ArrayList<>();
-        resultMaps.add(new MapResults());
+        resultMaps.add(new BoardResult());
 
         bones.createBones();
         board.createPositions(values);
@@ -104,69 +105,109 @@ public class Puzzle {
         return sortedCombies;
     }
 
-    public void solve(List<Combi> sorted){
 
-//        for (int i = 0; i < 3; i++) {
-//            Combi combi = sorted.get(i);
-//            List<MapResults> allMaps = resultMaps;
-//            System.out.println("length of all maps  " + allMaps.size());
+//    public void solve(List<Combi> combies) {
 //
+//        for (int i = 0; i < 5 ; i++) {
 //
+//            Combi combi = combies.get(i);
 //
-//            int totalPositionsForStone = combi.getLocations().size();
-//            System.out.println("totalPositionsForStone" + totalPositionsForStone);
-//            for(int j = 0; j < totalPositionsForStone; j++) {
-//                Pair p = combi.getLocations().get(j);
-//                solveHelp(combi.getBone(), p, allMaps);
+//             for(int j = 0; j < combi.getLocations().size(); j++) {
+//                 System.out.println("length resultsMap " + resultMaps.size());
 //
-//                for (int b = 0; b < allMaps.size(); b++) {
-//                    System.out.println("hier geweest");
+//                List<BoardResult> results = solveHelp(combi.getBone(), combi.getLocations().get(j), resultMaps);
 //
-//                    MapResults map = allMaps.get(j);
-//                    Pair p = combi.getLocations().get(j);
-//                    if (!map.containsPlacement(p)) {
-//                        Placement placement = new Placement(combi.getBone(), p);
-//                        map.setPlacement(placement);
-//
-//                        System.out.println("test");
-//                        for (int a = 0; a < resultMaps.size(); a++){
-//                            System.out.println("starting map");
-//                            System.out.println(resultMaps.get(a));
-//                            System.out.println("finished map");
-//                        }
+//                resultMaps.clear();
+//                resultMaps.addAll(results);
+//                    for (int a = 0; a < resultMaps.size(); a++) {
+//                     System.out.println(resultMaps.get(a));
 //                    }
-//                }
-//            }
+//             }
 //        }
+//
+//    }
+
+    public void solve(List<Combi> combies) {
+
+        for (int i = 0; i < 27 ; i++) {
+            System.out.println(" ronde " + i);
+
+            Combi combi = combies.get(i);
+            int amountOfLocations = combi.getLocations().size();
+
+            List<BoardResult> nextGenerationBoards = new ArrayList<>(); //leeg
+
+            // alle borden die er op dat moment zijn.
+            for (int index = 0; index < resultMaps.size(); index++) {
+
+                List<BoardResult> list = copyBoard(amountOfLocations, resultMaps.get(index));
+
+                List<BoardResult> nextGen = createNextGenerationBoards(combi.getBone(), list, combi.getLocations());
+
+                nextGenerationBoards.addAll(nextGen);
+             }
+
+             resultMaps.clear();
+             resultMaps.addAll(nextGenerationBoards);
+
+        }
     }
 
-    public List<MapResults> solveHelp (Bone bone, Pair pair, List<MapResults> maps) {
 
-        for (int i = 0; i < maps.size(); i++) {
-            MapResults map = maps.get(i);
-            int w = 1;
-            System.out.println(" printing the map" + w);
-            System.out.println(map);
-            System.out.println(" end");
-            w++;
 
-            if (!map.containsPlacement(pair)) {
-                Placement placement = new Placement(bone, pair);
-                map.setPlacement(placement);
 
-//                System.out.println("test");
-//                for (int a = 0; a < maps.size(); a++){
-//                    System.out.println("starting map");
-//                    System.out.println(maps.get(a));
-//                    System.out.println("finished map");
-//                }
-            }
-            return maps;
+
+    public List<BoardResult> copyBoard(int amountOfLocations, BoardResult board) {
+        List<BoardResult> nb = new ArrayList();
+        for (int y = 0; y < amountOfLocations; y++) {
+            BoardResult newBoard = new BoardResult();
+            newBoard.setPlacements(board.getPlacements());
+            nb.add(newBoard);
+        }
+        return nb;
+    }
+
+
+    private List<BoardResult> solveHelp(Bone bone, Pair pair, BoardResult board) {
+        List<BoardResult> b = new ArrayList<>();
+        if (!board.containsPlacement(pair)) {
+            Placement placement1 = new Placement(bone, pair.getPosition1());
+            Placement placement2 = new Placement(bone, pair.getPosition2());
+            board.setPlacement(placement1);
+            board.setPlacement(placement2);
+            System.out.println("true");
+            b.add(board);
+        } else {
+            System.out.println("removed board");
         }
 
-
-        return null;
+        return b;
     }
+
+    public List<BoardResult> createNextGenerationBoards(Bone bone, List<BoardResult> list, List<Pair> locations) {
+        ArrayList<BoardResult> result1 = new ArrayList<>();
+
+          for (int i = 0; i < locations.size(); i++) {
+              ArrayList<BoardResult> result = new ArrayList<>();
+              List<BoardResult> l1 = list;
+              List<BoardResult> l2 = list;
+
+              Pair pair1 = locations.get(i);
+              BoardResult l_1 = list.get(i);
+              List<BoardResult> r1 = solveHelp(bone, locations.get(i), list.get(i));
+              result.addAll(r1);
+
+              result1.addAll(result);
+           }
+
+
+
+
+
+
+        return result1;
+    }
+
 
 
 }

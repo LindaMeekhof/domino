@@ -1,7 +1,7 @@
 import org.junit.Test;
 import puzzle.*;
 
-import java.sql.SQLOutput;
+import javax.xml.stream.Location;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,57 +74,113 @@ public class PuzzleTest {
 
     @Test
     public void solve(){
-//        int[][] input = new int[][]{
-//                {6, 6, 2, 6, 5, 2, 4, 1},
-//                {1, 3, 2, 0, 1, 0, 3, 4},
-//                {1, 3, 2, 4, 6, 6, 5, 4},
-//                {1, 0, 4, 3, 2, 1, 1, 2},
-//                {5, 1, 3, 6, 0, 4, 5, 5},
-//                {5, 5, 4, 0, 2, 6, 0, 3},
-//                {6, 0, 5, 3, 4, 2, 0, 3}
-//        };
-//
-//        Puzzle puzzle = new Puzzle(input);
-//        puzzle.createSetCombinations();
-//        List<Combi> sorted = puzzle.sort(puzzle.getCombies());
-//
-//       // System.out.println("result");
-//        puzzle.solve(sorted);
+        int[][] input = new int[][]{
+                {6, 6, 2, 6, 5, 2, 4, 1},
+                {1, 3, 2, 0, 1, 0, 3, 4},
+                {1, 3, 2, 4, 6, 6, 5, 4},
+                {1, 0, 4, 3, 2, 1, 1, 2},
+                {5, 1, 3, 6, 0, 4, 5, 5},
+                {5, 5, 4, 0, 2, 6, 0, 3},
+                {6, 0, 5, 3, 4, 2, 0, 3}
+        };
 
-       // System.out.println(puzzle.getResultMaps().size());
+        Puzzle puzzle = new Puzzle(input);
+        puzzle.createSetCombinations();
+        List<Combi> sorted = puzzle.sort(puzzle.getCombies());
 
-//        for (int i = 0; i < puzzle.getResultMaps().size(); i++) {
-//            System.out.println(puzzle.getResultMaps().get(i));
-//        }
+        System.out.println(sorted);
+
+        puzzle.solve(sorted);
+
+
     }
 
     @Test
-    public void solveHelper(){
-        Puzzle puzzle = new Puzzle();
-        MapResults m1 = new MapResults();
-        Pair pair = new Pair(new Position(0, 0, 6), new Position (0,1,3));
-        m1.setPlacement(new Placement(new Bone(1, 2), pair));
-        MapResults m2 = new MapResults();
-        List<MapResults> map = new ArrayList<>();
-        map.add(m1);
-        map.add(m2);
+    public void copyBoard(){
+        int[][] input = new int[][]{
+                {6, 6, 2, 6, 5, 2, 4, 1},
+                {1, 3, 2, 0, 1, 0, 3, 4},
+                {1, 3, 2, 4, 6, 6, 5, 4},
+                {1, 0, 4, 3, 2, 1, 1, 2},
+                {5, 1, 3, 6, 0, 4, 5, 5},
+                {5, 5, 4, 0, 2, 6, 0, 3},
+                {6, 0, 5, 3, 4, 2, 0, 3}
+        };
 
-        puzzle.solveHelp(new Bone(1,5), new Pair(new Position(4, 4, 6), new Position (3,4,3)), map);
+        Puzzle puzzle = new Puzzle(input);
+
+        //Create combi
+        Bone b = new Bone(1,2,3);
+        Pair pair = new Pair(new Position(0, 0, 3), new Position (0,1,6));
+        Combi combi = new Combi(b);
+        combi.addLocation(pair);
+
+        //Create List of BoardResults
+        BoardResult boardresult = new BoardResult();
+        List<BoardResult> boards = new ArrayList<>();
+        boards.add(boardresult);
+
+
+        List<BoardResult> r = puzzle.copyBoard(3, boards.get(0));
+
+        System.out.println(r.size());
     }
 
     @Test
-    public void solveHelper2_stoneCanNotBePlaced(){
-        Puzzle puzzle = new Puzzle();
-        MapResults m1 = new MapResults();
-        Pair pair = new Pair(new Position(0, 0, 6), new Position (0,1,3));
-        m1.setPlacement(new Placement(new Bone(1, 2), pair));
-        MapResults m2 = new MapResults();
-        List<MapResults> map = new ArrayList<>();
-        map.add(m1);
-        map.add(m2);
+    public void copyBoard2(){
+        int[][] input = new int[][]{
+                {6, 6, 2, 6, 5, 2, 4, 1},
+                {1, 3, 2, 0, 1, 0, 3, 4},
+                {1, 3, 2, 4, 6, 6, 5, 4},
+                {1, 0, 4, 3, 2, 1, 1, 2},
+                {5, 1, 3, 6, 0, 4, 5, 5},
+                {5, 5, 4, 0, 2, 6, 0, 3},
+                {6, 0, 5, 3, 4, 2, 0, 3}
+        };
 
-        puzzle.solveHelp(new Bone(1,5), new Pair(new Position(0, 6, 6), new Position (3,4,3)), map);
+        Puzzle puzzle = new Puzzle(input);
+
+        //Create combi
+        Bone b = new Bone(1,2,3);
+        Pair pair = new Pair(new Position(0, 0, 3), new Position (0,1,6));
+        Combi combi = new Combi(b);
+        combi.addLocation(pair);
+
+        //Create List of BoardResults
+        BoardResult boardresult = new BoardResult();
+        Placement p1 = new Placement(new Bone(3,3,6), new Position(1,2,3));
+        Placement p2 = new Placement(new Bone(4,6,8), new Position(2,2,3));
+        boardresult.setPlacement(p1);
+        boardresult.setPlacement(p2);
+        List<BoardResult> boards = new ArrayList<>();
+        boards.add(boardresult);
+
+
+        List<BoardResult> r = puzzle.copyBoard(3, boards.get(0));
+
+        System.out.println(r.size());
+        System.out.println(r);
     }
+
+
+    @Test
+    public void createNextGenerationBoards(){
+
+        //create a list of boardResults
+        BoardResult boardresult = new BoardResult();
+        Placement p1 = new Placement(new Bone(3,3,6), new Position(0,1,3));
+        Placement p2 = new Placement(new Bone(4,6,8), new Position(0,0,4));
+        boardresult.setPlacement(p1);
+        boardresult.setPlacement(p2);
+        List<BoardResult> boards = new ArrayList<>();
+        boards.add(boardresult);
+
+        //List of pairs
+        Pair pair1 = new Pair(new Position(4, 4, 3), new Position (4,5,6));
+        Pair pair2 = new Pair(new Position(0, 0, 3), new Position (0,1,6));
+
+    }
+
 
 
 }

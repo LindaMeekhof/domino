@@ -3,16 +3,18 @@ package puzzle;
 public class Placement {
 
     private Bone bone;
-    private Pair pair;
+    private Position position;
 
-    public Placement(Bone bone, Pair pair){
+    public Placement(Bone bone, Position position) {
         this.bone = bone;
-        this.pair = pair;
+        this.position = position;
     }
 
     public Placement() {
 
     }
+
+
 
     public Bone getBone() {
         return bone;
@@ -22,15 +24,15 @@ public class Placement {
         this.bone = bone;
     }
 
-    public Pair getPair() {
-        return pair;
+    public Position getPosition() {
+        return position;
     }
 
-    public void setPair(Pair pair) {
-        this.pair = pair;
+    public void setPosition(Position position) {
+        this.position = position;
     }
 
     public String toSting(){
-        return "bone: " + bone + "  " + pair;
+        return "bone: " + bone + "  " + position;
     }
 }
