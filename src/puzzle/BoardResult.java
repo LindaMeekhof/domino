@@ -11,6 +11,10 @@ public class BoardResult {
         placements = new ArrayList<>();
     }
 
+    public BoardResult(BoardResult b){
+        this.placements = b.placements;
+    }
+
 
     public List<Placement> getPlacements() {
         return placements;
@@ -51,5 +55,7 @@ public class BoardResult {
         }
         return s;
     }
+
+
 
 }

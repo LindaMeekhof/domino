@@ -1,11 +1,12 @@
 import org.junit.Test;
 import puzzle.*;
 
-import javax.xml.stream.Location;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static junit.framework.TestCase.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 
 public class PuzzleTest {
 
@@ -49,6 +50,7 @@ public class PuzzleTest {
         assertFalse(puzzle.equal(bone, pair3));
     }
 
+
     @Test
     public void sort(){
         int[][] input = new int[][]{
@@ -87,10 +89,11 @@ public class PuzzleTest {
         Puzzle puzzle = new Puzzle(input);
         puzzle.createSetCombinations();
         List<Combi> sorted = puzzle.sort(puzzle.getCombies());
-
-        System.out.println(sorted);
+        List<BoardResult> boards = new ArrayList<>();
+        boards.add(new BoardResult());
 
         puzzle.solve(sorted);
+
 
 
     }

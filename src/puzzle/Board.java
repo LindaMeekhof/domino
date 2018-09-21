@@ -8,7 +8,6 @@ public class Board {
 
     private Set<Position> positions = new HashSet<>();
 
-
     public Board () {
 
     }
