@@ -14,7 +14,12 @@ public class Board {
     }
 
     public Board (int [][] inputBoard ) {
-        board = inputBoard;
+        board = new int[7][8];
+        for (int y = 0; y < 7; y++) {
+            for (int x = 0; x < 8; x++) {
+                board[y][x] = inputBoard[y][x];
+            }
+        }
     }
 
     public Board(Board board) {

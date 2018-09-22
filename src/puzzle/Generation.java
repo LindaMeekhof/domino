@@ -20,8 +20,11 @@ public class Generation {
         this.boards = boards;
     }
 
-    public void add(Board board){
+    public void addBoard(Board board){
         boards.add(board);
     }
 
+    public void addList (List<Board> b) {
+        boards.addAll(b);
+    }
 }

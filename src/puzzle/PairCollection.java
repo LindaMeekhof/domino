@@ -29,7 +29,6 @@ public class PairCollection {
                     Position position2 = new Position(x + 1, y, values [y][right]);
                     Pair pair = new Pair(position1, position2);
                     pairCollection.add(pair);
-                   // System.out.println(pair);
                 }
 
                 if (y < 6) {
@@ -37,7 +36,6 @@ public class PairCollection {
                     Position position2 = new Position(x, y + 1, values [y + 1][x]);
                     Pair pair = new Pair(position1, position2);
                     pairCollection.add(pair);
-                  //  System.out.println(pair);
                 }
             }
         }
