@@ -1,19 +1,45 @@
 package puzzle;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Board {
 
-    private Set<Position> positions = new HashSet<>();
+    private List<Position> positions = new ArrayList<>();
+    private int[][] board;
 
     public Board () {
-
+        this.board = new int[7][8];
     }
 
     public Board (int [][] inputBoard ) {
+        board = inputBoard;
+    }
 
+    public Board(Board board) {
+        positions = board.getPositions();
+        this.board = board.getBoard();
+    }
+
+    public List<Position> getPositions() {
+        return positions;
+    }
+
+    public void setPositions(List<Position> positions) {
+        this.positions = positions;
+    }
+
+    public int[][] getBoard() {
+        return board;
+    }
+
+    public void setBoard(int[][] board) {
+        this.board = board;
+    }
+
+    public void setPositions(ArrayList<Position> positions) {
+        this.positions = positions;
     }
 
     public void createPositions (int [][] values) {
@@ -26,6 +52,22 @@ public class Board {
         }
     }
 
+    public void setPosition(Position p, int value){
+        board[p.getyCo()][p.getxCo()] = value;
+    }
+
+
+    public String toString() {
+        String result = "\n";
+        for (int y = 0; y < 7; y++) {
+
+            for (int x = 0; x < 8; x++) {
+                result = "  " + result + board[y][x] +  "  ";
+            }
+            result = result + "\n";
+        }
+        return result;
+    }
 
     public String toString(int [][] values) {
         String result = "\n";

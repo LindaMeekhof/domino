@@ -22,6 +22,14 @@ public class Bone {
 
     }
 
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
     public int getPip1() {
         return pip1;
     }

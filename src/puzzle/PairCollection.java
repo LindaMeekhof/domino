@@ -1,8 +1,5 @@
 package puzzle;
 
-import puzzle.Pair;
-import puzzle.Position;
-
 import java.util.ArrayList;
 import java.util.List;
 

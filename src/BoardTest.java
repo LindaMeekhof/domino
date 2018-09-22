@@ -1,5 +1,6 @@
 import org.junit.Test;
 import puzzle.Board;
+import puzzle.Position;
 
 
 public class BoardTest {
@@ -34,5 +35,11 @@ public class BoardTest {
         };
         String result = board.toString(input);
         System.out.println(result);
+    }
+
+    @Test
+    public void fill(){
+        board.setPosition(new Position(1,1,3), 5);
+        System.out.println(board);
     }
 }

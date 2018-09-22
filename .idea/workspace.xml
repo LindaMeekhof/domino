@@ -2,16 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="486237f6-1c83-463f-8e82-bd23d64cce46" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/puzzle/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/puzzle/Generation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/domino/BoardTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/domino/BoardTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/domino/PuzzleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/domino/PuzzleTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/domino/puzzle/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/domino/puzzle/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/domino/puzzle/BoardResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/domino/puzzle/BoardResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/domino/puzzle/BoardResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/domino/puzzle/Bone.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/domino/puzzle/Bone.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/domino/puzzle/PairCollection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/domino/puzzle/PairCollection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/domino/puzzle/Placement.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/domino/puzzle/Puzzle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/domino/puzzle/Puzzle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/domino/puzzle/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/domino/test/BoardResultTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BoardTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PuzzleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PuzzleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/puzzle/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/puzzle/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/puzzle/BoardResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/puzzle/BoardResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/puzzle/BoardResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/puzzle/Bone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/puzzle/Bone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/puzzle/PairCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/puzzle/PairCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/puzzle/Placement.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/puzzle/Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/puzzle/Puzzle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/puzzle/Result.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/BoardResultTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,38 +36,39 @@
     <session id="-1611109167">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.0" value="6" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="9" />
-          <entry key="java" value="113" />
+          <entry key="java" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="9" />
-          <entry key="JAVA" value="113" />
+          <entry key="JAVA" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="45" />
-          <entry key="java" value="25860" />
+          <entry key="java" value="29331" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="25860" />
+          <entry key="JAVA" value="29331" />
           <entry key="PLAIN_TEXT" value="45" />
         </counts>
       </usages-collector>
@@ -63,7 +76,48 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/puzzle/Puzzle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/puzzle/Generation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#233#234#0" expanded="true" />
+                <element signature="e#262#263#0" expanded="true" />
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/puzzle/PairCollection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -76,6 +130,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>static</find>
+      <find>combies</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -96,12 +151,9 @@
         <option value="$PROJECT_DIR$/src/PairCollection.java" />
         <option value="$PROJECT_DIR$/src/Board.java" />
         <option value="$PROJECT_DIR$/src/test/BoardTest.java" />
-        <option value="$PROJECT_DIR$/src/BoardTest.java" />
-        <option value="$PROJECT_DIR$/src/puzzle/PairCollection.java" />
         <option value="$PROJECT_DIR$/src/puzzle/Bones.java" />
         <option value="$PROJECT_DIR$/src/puzzle/ResultMap.java" />
         <option value="$PROJECT_DIR$/src/puzzle/Placements.java" />
-        <option value="$PROJECT_DIR$/src/puzzle/Bone.java" />
         <option value="$PROJECT_DIR$/src/test/MapTest.java" />
         <option value="$PROJECT_DIR$/src/puzzle/Map.java" />
         <option value="$PROJECT_DIR$/src/puzzle/MapResults.java" />
@@ -110,9 +162,13 @@
         <option value="$PROJECT_DIR$/src/puzzle/Combi.java" />
         <option value="$PROJECT_DIR$/src/puzzle/Main.java" />
         <option value="$PROJECT_DIR$/src/puzzle/BoardResult.java" />
-        <option value="$PROJECT_DIR$/src/puzzle/Board.java" />
         <option value="$PROJECT_DIR$/src/puzzle/PuzzleNew.java" />
         <option value="$PROJECT_DIR$/src/puzzle/Result.java" />
+        <option value="$PROJECT_DIR$/src/puzzle/Generation.java" />
+        <option value="$PROJECT_DIR$/src/puzzle/PairCollection.java" />
+        <option value="$PROJECT_DIR$/src/puzzle/Board.java" />
+        <option value="$PROJECT_DIR$/src/puzzle/Bone.java" />
+        <option value="$PROJECT_DIR$/src/BoardTest.java" />
         <option value="$PROJECT_DIR$/src/puzzle/Puzzle.java" />
         <option value="$PROJECT_DIR$/src/PuzzleTest.java" />
       </list>
@@ -162,7 +218,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537451933228" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537609050836" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -188,9 +244,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PuzzleTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="puzzle.Main" />
+  <component name="RunManager" selected="Application.Puzzle">
+    <configuration name="Puzzle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="puzzle.Puzzle" />
       <module name="domino" />
       <extension name="coverage">
         <pattern>
@@ -202,58 +258,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PuzzleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BoardTest.fill" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domino" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PuzzleTest" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PuzzleTest.copyBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="domino" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PuzzleTest" />
-      <option name="METHOD_NAME" value="copyBoard" />
+      <option name="MAIN_CLASS_NAME" value="BoardTest" />
+      <option name="METHOD_NAME" value="fill" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PuzzleTest.copyBoard2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PuzzleTest.isNotFree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domino" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PuzzleTest" />
-      <option name="METHOD_NAME" value="copyBoard2" />
+      <option name="METHOD_NAME" value="isNotFree" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PuzzleTest.solve" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PuzzleTest.isNotFree2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="domino" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PuzzleTest" />
-      <option name="METHOD_NAME" value="solve" />
+      <option name="METHOD_NAME" value="isNotFree2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PuzzleTest.setPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="domino" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PuzzleTest" />
+      <option name="METHOD_NAME" value="setPosition" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.PuzzleTest.solve" />
-      <item itemvalue="JUnit.PuzzleTest" />
-      <item itemvalue="JUnit.PuzzleTest.copyBoard" />
-      <item itemvalue="JUnit.PuzzleTest.copyBoard2" />
-      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Puzzle" />
+      <item itemvalue="JUnit.PuzzleTest.setPosition" />
+      <item itemvalue="JUnit.PuzzleTest.isNotFree" />
+      <item itemvalue="JUnit.PuzzleTest.isNotFree2" />
+      <item itemvalue="JUnit.BoardTest.fill" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PuzzleTest" />
-        <item itemvalue="JUnit.PuzzleTest.solve" />
-        <item itemvalue="JUnit.PuzzleTest.copyBoard2" />
-        <item itemvalue="JUnit.PuzzleTest.copyBoard" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Puzzle" />
+        <item itemvalue="JUnit.BoardTest.fill" />
+        <item itemvalue="JUnit.PuzzleTest.isNotFree2" />
+        <item itemvalue="JUnit.PuzzleTest.isNotFree" />
+        <item itemvalue="JUnit.PuzzleTest.setPosition" />
       </list>
     </recent_temporary>
   </component>
@@ -271,27 +329,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PuzzleTest_solve - 2018.09.20 at 14h 47m 17s.xml">
-      <configuration name="PuzzleTest.solve" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PuzzleTest_solve - 2018.09.20 at 14h 56m 28s.xml">
-      <configuration name="PuzzleTest.solve" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PuzzleTest_solve - 2018.09.20 at 15h 23m 04s.xml">
-      <configuration name="PuzzleTest.solve" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PuzzleTest_solve - 2018.09.20 at 15h 31m 29s.xml">
-      <configuration name="PuzzleTest.solve" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PuzzleTest_solve - 2018.09.20 at 15h 37m 26s.xml">
-      <configuration name="PuzzleTest.solve" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PuzzleTest_solve - 2018.09.20 at 15h 37m 30s.xml">
-      <configuration name="PuzzleTest.solve" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PuzzleTest_solve - 2018.09.20 at 15h 47m 43s.xml">
-      <configuration name="PuzzleTest.solve" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PuzzleTest_solve - 2018.09.20 at 15h 47m 50s.xml">
       <configuration name="PuzzleTest.solve" configurationId="JUnit" />
     </history-entry>
@@ -301,11 +338,33 @@
     <history-entry file="PuzzleTest - 2018.09.20 at 15h 57m 05s.xml">
       <configuration name="PuzzleTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PuzzleTest_isFree - 2018.09.22 at 10h 55m 16s.xml">
+      <configuration name="PuzzleTest.isFree" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PuzzleTest_setPosition - 2018.09.22 at 11h 04m 58s.xml">
+      <configuration name="PuzzleTest.setPosition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PuzzleTest_isNotFree - 2018.09.22 at 11h 06m 17s.xml">
+      <configuration name="PuzzleTest.isNotFree" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PuzzleTest_isNotFree2 - 2018.09.22 at 11h 06m 45s.xml">
+      <configuration name="PuzzleTest.isNotFree2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_fill - 2018.09.22 at 11h 27m 31s.xml">
+      <configuration name="BoardTest.fill" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_fill - 2018.09.22 at 11h 35m 35s.xml">
+      <configuration name="BoardTest.fill" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BoardTest_fill - 2018.09.22 at 11h 35m 40s.xml">
+      <configuration name="BoardTest.fill" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="973" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20818071" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13858365" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -313,16 +372,16 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3297769" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.081725314" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.30735457" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291714" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35754824" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4415437" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32711306" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.15323496" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -369,15 +428,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/puzzle/Puzzle.java</url>
-          <line>152</line>
+          <line>118</line>
           <properties />
-          <option name="timeStamp" value="49" />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/puzzle/Puzzle.java</url>
+          <line>120</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/puzzle/Puzzle.java</url>
+          <line>124</line>
+          <properties />
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/puzzle/Puzzle.java</url>
+          <line>135</line>
+          <properties />
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/puzzle/Puzzle.java</url>
           <line>145</line>
           <properties />
-          <option name="timeStamp" value="52" />
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -397,13 +474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BoardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="19" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -416,9 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
           <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -464,24 +531,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="432" selection-start-line="432" selection-end-line="432" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="106">
           <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/puzzle/Bone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -523,19 +576,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/puzzle/PairCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/puzzle/Placement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/puzzle/PuzzleNew.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/puzzle/Result.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="656" selection-start-line="656" selection-end-line="656" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/puzzle/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="35" />
           <folding>
-            <element signature="e#444#445#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -550,38 +619,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/puzzle/PuzzleNew.java" />
-    <entry file="file://$PROJECT_DIR$/src/puzzle/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/puzzle/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="45" column="19" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+        <state relative-caret-position="274">
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#240#241#0" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#1239#1240#0" expanded="true" />
+            <element signature="e#1306#1307#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+    <entry file="file://$PROJECT_DIR$/src/puzzle/Bone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="351">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding>
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#494#495#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/puzzle/Result.java">
+    <entry file="file://$PROJECT_DIR$/src/BoardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="54">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/puzzle/BoardResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+        <state relative-caret-position="81">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#162#163#0" expanded="true" />
@@ -590,30 +666,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/puzzle/Board.java">
+    <entry file="file://$PROJECT_DIR$/src/PuzzleTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+        <state relative-caret-position="247">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/puzzle/PairCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/puzzle/Generation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/puzzle/Puzzle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-164">
-          <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PuzzleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+        <state relative-caret-position="92">
+          <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
