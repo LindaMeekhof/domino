@@ -118,8 +118,6 @@ public class Puzzle {
         boolean result = false;
         int[][] b = board.getBoard();
         Position pos1 = pair.getPosition1();
-//        int x1 = pos1.getyCo();
-//        int y1 = pos1.getxCo();
         Position pos2 = pair.getPosition2();
 
         if (b[pos1.getxCo()][pos1.getyCo()] == 0 &&

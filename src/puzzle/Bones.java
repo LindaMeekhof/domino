@@ -12,10 +12,6 @@ public class Bones {
         return bones;
     }
 
-    public void setBones(List<Bone> bones) {
-        this.bones = bones;
-    }
-
     public void createBones () {
         int value = 1;
         for (int x = 0; x < 7; x++) {

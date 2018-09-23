@@ -59,7 +59,6 @@ public class Board {
         board[p.getxCo()][p.getyCo()] = value;
     }
 
-
     public String toString() {
         String result = "\n";
         for (int y = 0; y < 7; y++) {
@@ -72,16 +71,14 @@ public class Board {
         return result;
     }
 
-    public String toString(int [][] values) {
-        String result = "\n";
+    public void print() {
         for (int y = 0; y < 7; y++) {
-
             for (int x = 0; x < 8; x++) {
-                result = "  " + result + values[y][x] +  "  ";
+                System.out.printf("%2d  ", board[y][x]);
             }
-            result = result + "\n";
+            System.out.println();
         }
-        return result;
+        System.out.println();
     }
 
     public static void main(String[] args) {
@@ -99,7 +96,6 @@ public class Board {
         Board b = new Board(input);
         b.createPositions(input);
         System.out.println(b);
-
 
         Board c = new Board();
         System.out.println(c);
