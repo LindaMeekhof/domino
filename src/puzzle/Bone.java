@@ -18,32 +18,17 @@ public class Bone {
         this.value = value;
     }
 
-    public Bone(){
-
-    }
-
     public int getValue() {
         return value;
     }
 
-    public void setValue(int value) {
-        this.value = value;
-    }
 
     public int getPip1() {
         return pip1;
     }
 
-    public void setPip1(int pip1) {
-        this.pip1 = pip1;
-    }
-
     public int getPip2() {
         return pip2;
-    }
-
-    public void setPip2(int pip2) {
-        this.pip2 = pip2;
     }
 
     public String toString(){

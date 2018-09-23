@@ -8,10 +8,6 @@ public class Combi{
     private Bone bone;
     private List<Pair> locations = new ArrayList<>();
 
-    public Combi(){
-
-    }
-
     public Combi(Bone bone) {
         this.bone = bone;
     }
@@ -20,20 +16,8 @@ public class Combi{
         return bone;
     }
 
-    public void setBone(Bone bone) {
-        this.bone = bone;
-    }
-
     public List<Pair> getLocations() {
         return locations;
-    }
-
-    public void setLocations(List<Pair> locations) {
-        this.locations = locations;
-    }
-
-    public void addLocation(Pair pair) {
-        locations.add(pair);
     }
 
     public String toString(){

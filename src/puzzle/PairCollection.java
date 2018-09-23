@@ -15,10 +15,6 @@ public class PairCollection {
         return pairCollection;
     }
 
-    public void setPairCollection(List<Pair> pairCollection) {
-        this.pairCollection = pairCollection;
-    }
-
     public void createPairCollection (int[][] values) {
         for (int y = 0; y < 7; y++) {
             for (int x = 0; x < 8; x++) {

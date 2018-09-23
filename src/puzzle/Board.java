@@ -37,10 +37,6 @@ public class Board {
         return positions;
     }
 
-    public void setPositions(List<Position> positions) {
-        this.positions = positions;
-    }
-
     public int[][] getBoard() {
         return board;
     }
@@ -49,9 +45,6 @@ public class Board {
         this.board = board;
     }
 
-    public void setPositions(ArrayList<Position> positions) {
-        this.positions = positions;
-    }
 
     public void createPositions (int [][] values) {
         for (int y = 0; y < 7; y++) {
@@ -92,6 +85,7 @@ public class Board {
     }
 
     public static void main(String[] args) {
+        //Testing deepcopy board
         int[][] input = new int[][]{
                 {6, 6, 2, 6, 5, 2, 4, 1},
                 {1, 3, 2, 0, 1, 0, 3, 4},
@@ -102,16 +96,16 @@ public class Board {
                 {6, 0, 5, 3, 4, 2, 0, 3}
         };
 
-//        Board b = new Board(input);
-//        b.createPositions(input);
-//        System.out.println(b);
-//
-//
-//        Board c = new Board();
-//        System.out.println(c);
-//
-//        Board d = new Board(c);
-//        System.out.println(d);
+        Board b = new Board(input);
+        b.createPositions(input);
+        System.out.println(b);
+
+
+        Board c = new Board();
+        System.out.println(c);
+
+        Board d = new Board(c);
+        System.out.println(d);
     }
 
 }
