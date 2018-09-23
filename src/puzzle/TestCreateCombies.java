@@ -1,12 +1,16 @@
 package puzzle;
 
+import java.util.List;
 
-
-public class Main {
+public class TestCreateCombies {
 
     public static void main(String[] args) {
-        System.out.println("test");
+        //create bones
+        Bones bones = new Bones();
+        bones.createBones();
+        System.out.println(bones.getBones());
 
+        //create combies
         int[][] input = new int[][]{
                 {6, 6, 2, 6, 5, 2, 4, 1},
                 {1, 3, 2, 0, 1, 0, 3, 4},
@@ -17,23 +21,11 @@ public class Main {
                 {6, 0, 5, 3, 4, 2, 0, 3}
         };
 
-        int x = input [2][3];
-        System.out.println(x);
-
-
-
-        int[][] map = new int[2][6];
-        map [0][1] = 6;
-        map [1][5] = 5;
-        map [1][4] = 3;
-
-
-        int[][] n = new int[2][3];
-        System.out.println("value" + n[1][1]);
-
+        Puzzle puzzle = new Puzzle(input);
+        puzzle.createSetCombinations();
+        List<Combi> sorted = puzzle.sort(puzzle.getCombies());
+        System.out.println(sorted);
 
 
     }
-
-
 }

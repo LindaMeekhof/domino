@@ -39,7 +39,7 @@ public class BoardTest {
 
     @Test
     public void fill(){
-        board.setPosition(new Position(1,1,3), 5);
+        board.setPosition(new Position(2,1,3), 5);
         System.out.println(board);
     }
 }

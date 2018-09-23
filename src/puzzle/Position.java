@@ -2,8 +2,9 @@ package puzzle;
 
 public class Position {
 
-    private int xCo;
+
     private int yCo;
+    private int xCo;
     private int value;
 
     public Position() {
@@ -15,6 +16,13 @@ public class Position {
         this.value = value;
     }
 
+    public int getyCo() {
+        return yCo;
+    }
+
+    public void setyCo(int yCo) {
+        this.yCo = yCo;
+    }
 
     public int getxCo() {
         return xCo;
@@ -22,14 +30,6 @@ public class Position {
 
     public void setxCo(int xCo) {
         this.xCo = xCo;
-    }
-
-    public int getyCo() {
-        return yCo;
-    }
-
-    public void setyCo(int yCo) {
-        this.yCo = yCo;
     }
 
     public int getValue() {
@@ -41,7 +41,7 @@ public class Position {
     }
 
     public String toString(){
-        return "( " + xCo + " , " + yCo + " )" + " value :" + value;
+        return "( " + yCo + " , " + xCo + " )" + " value :" + value;
     }
 
 }

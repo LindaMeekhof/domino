@@ -10,29 +10,21 @@ public class Puzzle {
     private Board board;
     private PairCollection pairs;
     private List<Combi> combies = new ArrayList<>();
-  //  private List<Generation> generations;
-
-
-    public Puzzle() {
-
-    }
-
-
+    private List<Generation> generations;
 
     public Puzzle(int[][] values) {
         bones = new Bones();
         board = new Board(values);
         pairs = new PairCollection();
 
-
         bones.createBones();
         board.createPositions(values);
         pairs.createPairCollection(values);
 
-     //   generations = new ArrayList<>();
-       // Generation g = new Generation();
-     //   g.addBoard(new Board());
-     //   generations.add(g);
+        generations = new ArrayList<>();
+        Generation g = new Generation();
+        g.addBoard(new Board());
+        generations.add(g);
     }
 
 
@@ -68,6 +60,14 @@ public class Puzzle {
         this.combies = combies;
     }
 
+    public List<Generation> getGenerations() {
+        return generations;
+    }
+
+    public void setGenerations(List<Generation> generations) {
+        this.generations = generations;
+    }
+
     public void createSetCombinations() {
         for (int i = 0; i < bones.getBones().size(); i++) {
             Combi combi = new Combi(bones.getBones().get(i));
@@ -90,7 +90,6 @@ public class Puzzle {
         return ((p1 == v1 && p2 == v2) || p1 == v2 && p2 == v1);
     }
 
-    // kan mooier.
     public List<Combi> sort(List<Combi> combies) {
         List sortedCombies = new ArrayList();
         int lStones = 28;
@@ -114,15 +113,12 @@ public class Puzzle {
         return nb;
     }
 
-    public void play(List<Combi> sortedCombies, Generation generation) {
-        List<Generation> generations = new ArrayList<>();
-        generations.add(generation);
+    public void play(List<Combi> sortedCombies) {
 
         for (int i = 0; i < sortedCombies.size(); i++) {
             Combi combi = sortedCombies.get(i);
             int amountOfLocations = sortedCombies.get(i).getLocations().size();
-            int amountOfBoards = combi.getLocations().size();
-            System.out.println(" amount of boards" + i + amountOfBoards);
+
             Generation nextGeneration = new Generation();
             generations.add(nextGeneration);
 
@@ -131,19 +127,11 @@ public class Puzzle {
             for (int b = 0; b < generations.get(i).getBoards().size(); b++) {
 
                 List<Board> copyList = copyBoard(amountOfLocations, generations.get(i).getBoards().get(b));
-                System.out.println(copyList);
-                copyList.get(0).setPosition(new Position(0,0,5), 6);
 
-//                nextGeneration.getBoards().addAll(copyList);
-                   System.out.println("nextgen \n" + nextGeneration);
-//                List<Board> n = createNextGenerationBoards(copyList, combi.getLocations(), combi.getBone());
-//                next.addAll(n);
+                List<Board> n = createNextGenerationBoards(copyList, combi.getLocations(), combi.getBone());
+                next.addAll(n);
             }
-
-//            List<Board> nextGen = generations.get(i+1).getBoards();
-//            for (int j = 0; j < next.size(); j++){
-//                nextGen.add(next.get(j));
-//            }
+            nextGeneration.addList(next);
         }
     }
 
@@ -152,11 +140,10 @@ public class Puzzle {
 
         for(int i = 0; i < copyBoards.size(); i++) {
             if(isFree(copyBoards.get(i), pairs.get(i))) {
-                Board b = new Board();
-                b.setBoard(copyBoards.get(i).getBoard());
-                b.setPosition(pairs.get(i).getPosition1(), bone.getValue());
-                b.setPosition(pairs.get(i).getPosition2(), bone.getValue());
-                newBoards.add(b);
+                copyBoards.get(i).setBoard(copyBoards.get(i).getBoard());
+                copyBoards.get(i).setPosition(pairs.get(i).getPosition1(), bone.getValue());
+                copyBoards.get(i).setPosition(pairs.get(i).getPosition2(), bone.getValue());
+                newBoards.add(copyBoards.get(i));
             }
         }
         return newBoards;
@@ -167,15 +154,16 @@ public class Puzzle {
         boolean result = false;
         int[][] b = board.getBoard();
         Position pos1 = pair.getPosition1();
+//        int x1 = pos1.getyCo();
+//        int y1 = pos1.getxCo();
         Position pos2 = pair.getPosition2();
-        if (b[pos1.getyCo()][pos1.getxCo()] == 0 &&
-            b[pos2.getyCo()][pos2.getxCo()] == 0) {
+
+        if (b[pos1.getxCo()][pos1.getyCo()] == 0 &&
+            b[pos2.getxCo()][pos2.getyCo()] == 0) {
             result = true;
         }
         return result;
     }
-
-
 
     /**
      * Main program
@@ -192,27 +180,24 @@ public class Puzzle {
                 {5, 5, 4, 0, 2, 6, 0, 3},
                 {6, 0, 5, 3, 4, 2, 0, 3}
         };
-//
-//        Puzzle puzzle = new Puzzle(input);
-//        puzzle.createSetCombinations();
-//        List<Combi> sorted = puzzle.sort(puzzle.getCombies());
-//        System.out.println(sorted);
-//
-//        Generation g = new Generation();
-//        g.addBoard(new Board());
-//
-//        puzzle.play(sorted, g);
 
-        Board b = new Board(input);
-        Board c = new Board(new int[7][8]);
+        Puzzle puzzle = new Puzzle(input);
+        puzzle.createSetCombinations();
+        List<Combi> sorted = puzzle.sort(puzzle.getCombies());
+        System.out.println(sorted);
 
-        Board d = new Board();
-        d.setPosition(new Position(0,0,1), 3);
+        puzzle.play(sorted);
+        int size = puzzle.getGenerations().size();
+        System.out.println(size);
 
+        int boards = puzzle.getGenerations().get(28).getBoards().size();
+        System.out.println(boards);
 
-        Board e = new Board(b.getBoard());
-        e.setPosition(new Position(0,0,1), 3);
-        b.setPosition(new Position(0,0,1), 8);
+        List<Board> b = puzzle.getGenerations().get(28).getBoards();
+
+        for (int i = 0; i < b.size(); i++) {
+            System.out.println(b.get(i));
+        }
     }
 
  }
