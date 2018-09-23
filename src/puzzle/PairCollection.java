@@ -20,9 +20,8 @@ public class PairCollection {
             for (int x = 0; x < 8; x++) {
 
                 if (x < 7) {
-                    int right = x + 1;
                     Position position1 = new Position(x, y, values[y][x]);
-                    Position position2 = new Position(x + 1, y, values [y][right]);
+                    Position position2 = new Position(x + 1, y, values [y][x + 1]);
                     Pair pair = new Pair(position1, position2);
                     pairCollection.add(pair);
                 }

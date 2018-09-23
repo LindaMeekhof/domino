@@ -35,6 +35,7 @@ public class Puzzle {
         return generations;
     }
 
+
     public void createSetCombinations() {
         for (int i = 0; i < bones.getBones().size(); i++) {
             Combi combi = new Combi(bones.getBones().get(i));
@@ -69,6 +70,7 @@ public class Puzzle {
         }
         return sortedCombies;
     }
+
 
     public List<Board> copyBoard(int amountOfLocations, Board board) {
         List<Board> nb = new ArrayList();

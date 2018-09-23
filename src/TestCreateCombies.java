@@ -1,4 +1,6 @@
-package puzzle;
+import puzzle.Bones;
+import puzzle.Combi;
+import puzzle.Puzzle;
 
 import java.util.List;
 
@@ -25,7 +27,5 @@ public class TestCreateCombies {
         puzzle.createSetCombinations();
         List<Combi> sorted = puzzle.sort(puzzle.getCombies());
         System.out.println(sorted);
-
-
     }
 }

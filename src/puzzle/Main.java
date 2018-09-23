@@ -54,7 +54,7 @@ public class Main {
         Board b3 = new Board(input);
         System.out.println(b3);
 
-        System.out.println("Maps resulting from layout input");
+        System.out.println("Maps resulting from the above layout input");
         for (int i = 0; i < b.size(); i++) {
             System.out.println(b.get(i));
         }
