@@ -56,7 +56,7 @@ public class Board {
     }
 
     public void setPosition(Position p, int value){
-        board[p.getxCo()][p.getyCo()] = value;
+        board[p.getyCo()][p.getxCo()] = value;
     }
 
     public String toString() {

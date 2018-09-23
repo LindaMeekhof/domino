@@ -42,7 +42,7 @@ public class Main {
     }
 
     public static void solve(int[][] input){
-        
+
         Puzzle puzzle = new Puzzle(input);
         puzzle.createSetCombinations();
         List<Combi> sorted = puzzle.sort(puzzle.getCombies());

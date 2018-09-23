@@ -120,8 +120,8 @@ public class Puzzle {
         Position pos1 = pair.getPosition1();
         Position pos2 = pair.getPosition2();
 
-        if (b[pos1.getxCo()][pos1.getyCo()] == 0 &&
-            b[pos2.getxCo()][pos2.getyCo()] == 0) {
+        if (b[pos1.getyCo()][pos1.getxCo()] == 0 &&
+            b[pos2.getyCo()][pos2.getxCo()] == 0) {
             result = true;
         }
         return result;
